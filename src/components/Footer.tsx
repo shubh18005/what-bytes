@@ -35,7 +35,7 @@ export default function Footer() {
               href="https://facebook.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full bg-[#1A365D] hover:bg-[#0052B4] text-white flex items-center justify-center cursor-pointer transition-colors"
+              className="w-8 h-8 rounded-full bg-[#0052B4] hover:bg-[#0066cc] text-white flex items-center justify-center cursor-pointer transition-colors"
               aria-label="Follow us on Facebook"
             >
               <FacebookIcon className="w-4 h-4 fill-current" />
@@ -46,7 +46,7 @@ export default function Footer() {
               href="https://twitter.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full bg-[#1A365D] hover:bg-[#0052B4] text-white flex items-center justify-center cursor-pointer transition-colors"
+              className="w-8 h-8 rounded-full bg-[#0052B4] hover:bg-[#0066cc] text-white flex items-center justify-center cursor-pointer transition-colors"
               aria-label="Follow us on Twitter"
             >
               <TwitterIcon className="w-4 h-4" />
@@ -57,7 +57,7 @@ export default function Footer() {
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full bg-[#1A365D] hover:bg-[#0052B4] text-white flex items-center justify-center cursor-pointer transition-colors"
+              className="w-8 h-8 rounded-full bg-[#0052B4] hover:bg-[#0066cc] text-white flex items-center justify-center cursor-pointer transition-colors"
               aria-label="Follow us on Instagram"
             >
               <InstagramIcon className="w-4 h-4" />
