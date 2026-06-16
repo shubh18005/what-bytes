@@ -2,7 +2,7 @@
 
 A high-performance, responsive e-commerce product catalog application built with **Next.js 16**, **Tailwind CSS v4**, and **TypeScript**. This project implements dynamic routing, robust product filtering architectures, and a centralized global shopping cart engine.
 
-🎯 **Live Deployment Link:** [View Live Application](https://YOUR-SUBDOMAIN.vercel.app)
+🎯 **Live Deployment Link:** [View Live Application](https://what-bytes-shubh18005s-projects.vercel.app)
 
 ---
 
