@@ -1,55 +1,139 @@
-# Responsive E-Commerce Catalog Workspace
+# 🛒 WhatBytes — Responsive E-Commerce Catalog
 
-A high-performance, responsive e-commerce product catalog application built with **Next.js 16**, **Tailwind CSS v4**, and **TypeScript**. This project implements dynamic routing, robust product filtering architectures, and a centralized global shopping cart engine.
+> 📌 **Assignment Submission** — This project was built as part of a front-end developer assignment for **WhatBytes**.
 
-🎯 **Live Deployment Link:** [View Live Application](https://what-bytes-shubh18005s-projects.vercel.app)
+A high-performance, fully responsive e-commerce product catalog built with **Next.js 16**, **Tailwind CSS v4**, **TypeScript**, and **Zustand** for global state management.
 
----
-
-
-## 🚀 Key Features
-
-*   **Dynamic Product Catalog:** Fully responsive grid layout displaying product mock cards with smooth image transitions and detailed hover states.
-*   **Advanced Multi-Attribute Filters:** Instant client-side filtering system allowing users to search by category, price boundaries, and specific tags synchronously.
-*   **Centralized Global Cart:** A state-managed shopping cart experience supporting asynchronous quantity modifications, item removals, and real-time total evaluations.
-*   **Local State Synchronization:** Automatic hydration and caching mechanics to preserve user cart structures across browser sessions.
-*   **Fully Responsive Viewports:** Custom tailored interface breakpoints for flawless rendering across small mobile screens, tablets, and wide desktop setups.
+🔗 **Live Demo:** [what-bytes-chi.vercel.app](https://what-bytes-chi.vercel.app)
 
 ---
 
-## 🛠️ Tech Stack & Architectural Decisions
+## ✨ Features
 
-### Core Framework: Next.js 16 & React
-*   Utilizes the modern **App Router architecture** for optimized file-based routing protocols.
-*   Separation of high-performance server structures and client-side interactive modules via granular `'use client'` hydration boundaries.
-
-### State Management: Zustand
-*   **Why Zustand?** Instead of adding the heavy overhead of Redux Toolkit or dealing with the re-rendering performance bottlenecks of standard React Context API, **Zustand** was selected. 
-*   It provides a highly optimized, lightweight, centralized pub/sub store. 
-*   Leverages the built-in `persist` middleware to automatically synchronize the basket state with browser `localStorage` cleanly without complex boilerplate.
-
-### Styling System: Tailwind CSS v4
-*   Leverages Tailwind's advanced engine for hyper-fast utility styling.
-*   Maintains strict visual consistency across fluid responsive layouts using dynamic flexbox configurations and CSS Grid architectures.
+- **Dynamic Product Catalog** — Responsive grid layout with smooth image transitions and hover states
+- **Advanced Multi-Attribute Filtering** — Instant client-side filtering by category, price range, and tags
+- **Global Shopping Cart** — Centralized cart with quantity updates, item removal, and real-time totals
+- **Persistent Cart State** — Cart is saved to `localStorage` and restored on page reload
+- **Fully Responsive** — Optimized for mobile, tablet, and desktop viewports
 
 ---
 
-## 📦 Directory Structure
+## 🛠️ Tech Stack
 
-```text
+| Technology | Purpose |
+|---|---|
+| Next.js 16 (App Router) | Framework & routing |
+| React 19 | UI components |
+| TypeScript | Type safety |
+| Tailwind CSS v4 | Utility-first styling |
+| Zustand v5 | Lightweight global state management |
+| Lucide React | Icon library |
+| Vercel | Deployment |
+
+---
+
+## 📁 Project Structure
+
+```
 src/
-├── app/                  # App Router structural paths & viewports
-│   ├── cart/            # Shopping cart overview layout
-│   ├── product/         # Dynamic individual item view modules
-│   ├── layout.tsx       # Root document structure & wrapper setups
-│   └── page.tsx         # Primary catalog home view
-├── components/          # Sharable UI architectural units
-│   ├── Header.tsx       # Navigation layout with live badge indicators
-│   ├── Footer.tsx       # Responsive footer blocks with social nodes
-│   ├── ProductCard.tsx  # Dynamic grid listing item component
-│   ├── SidebarFilters.tsx # Multi-variable query filtering component
-│   └── SocialIcons.tsx  # Lightweight custom SVG asset components
-├── data/                # Data structures & mock product sets
-│   └── products.ts      # Core product listing data array
-└── store/               # Centralized state management nodes
-    └── useCartStore.ts  # Zustand cart interaction engine
+├── app/
+│   ├── cart/            # Cart page
+│   ├── product/         # Dynamic product detail pages
+│   ├── layout.tsx       # Root layout
+│   └── page.tsx         # Home / catalog page
+├── components/
+│   ├── Header.tsx       # Navbar with live cart badge
+│   ├── Footer.tsx       # Responsive footer
+│   ├── ProductCard.tsx  # Product grid item
+│   ├── SidebarFilters.tsx  # Category, price & tag filters
+│   └── SocialIcons.tsx  # SVG social icons
+├── data/
+│   └── products.ts      # Mock product data
+└── store/
+    └── useCartStore.ts  # Zustand cart store with persistence
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/shubh18005/what-bytes.git
+cd what-bytes
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
+
+---
+
+## 🌐 Deployment
+
+This project is deployed on **Vercel**.
+
+🔗 Live URL: [what-bytes-chi.vercel.app](https://what-bytes-chi.vercel.app)
+
+Every push to the `main` branch triggers an automatic redeployment.
+
+---
+
+## 📋 Assignment Details
+
+This project was submitted as a **front-end developer assignment** for **WhatBytes**.
+
+### Assignment Requirements Fulfilled
+
+| Requirement | Status |
+|---|---|
+| Responsive product listing page | ✅ |
+| Product filtering (category, price, tags) | ✅ |
+| Individual product detail page | ✅ |
+| Shopping cart with add/remove/update | ✅ |
+| Cart persistence across sessions | ✅ |
+| Clean, modular component architecture | ✅ |
+| TypeScript throughout | ✅ |
+| Deployed live on Vercel | ✅ |
+
+### Key Implementation Decisions
+
+- **Zustand over Redux** — Lighter footprint with built-in `persist` middleware, avoiding the boilerplate overhead of Redux Toolkit while still providing a centralized, reactive store.
+- **Next.js App Router** — Used the modern file-based routing system with granular `'use client'` boundaries to separate server and client components for optimal performance.
+- **Tailwind CSS v4** — Utility-first styling for rapid, consistent UI development with responsive breakpoints and custom design tokens.
+- **Client-side Filtering** — All filters (category, price range, tags) run synchronously on the client for instant, zero-latency feedback without additional API calls.
+
+---
+
+## 👨‍💻 Author
+
+**Shubh Garg**
+
+- 🔗 GitHub: [github.com/shubh18005](https://github.com/shubh18005)
+- 💼 LinkedIn: [linkedin.com/in/shubh-garg-90ab9a1b6](https://www.linkedin.com/in/shubh-garg-90ab9a1b6/)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
