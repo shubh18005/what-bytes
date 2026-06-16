@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Responsive E-Commerce Catalog Workspace
 
-## Getting Started
+A high-performance, responsive e-commerce product catalog application built with **Next.js 16**, **Tailwind CSS v4**, and **TypeScript**. This project implements dynamic routing, robust product filtering architectures, and a centralized global shopping cart engine.
 
-First, run the development server:
+🎯 **Live Deployment Link:** [View Live Application](https://YOUR-SUBDOMAIN.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Responsive E-Commerce Catalog Workspace
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A high-performance, responsive e-commerce product catalog application built with **Next.js 16**, **Tailwind CSS v4**, and **TypeScript**. This project implements dynamic routing, robust product filtering architectures, and a centralized global shopping cart engine.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*   **Dynamic Product Catalog:** Fully responsive grid layout displaying product mock cards with smooth image transitions and detailed hover states.
+*   **Advanced Multi-Attribute Filters:** Instant client-side filtering system allowing users to search by category, price boundaries, and specific tags synchronously.
+*   **Centralized Global Cart:** A state-managed shopping cart experience supporting asynchronous quantity modifications, item removals, and real-time total evaluations.
+*   **Local State Synchronization:** Automatic hydration and caching mechanics to preserve user cart structures across browser sessions.
+*   **Fully Responsive Viewports:** Custom tailored interface breakpoints for flawless rendering across small mobile screens, tablets, and wide desktop setups.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack & Architectural Decisions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Core Framework: Next.js 16 & React
+*   Utilizes the modern **App Router architecture** for optimized file-based routing protocols.
+*   Separation of high-performance server structures and client-side interactive modules via granular `'use client'` hydration boundaries.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### State Management: Zustand
+*   **Why Zustand?** Instead of adding the heavy overhead of Redux Toolkit or dealing with the re-rendering performance bottlenecks of standard React Context API, **Zustand** was selected. 
+*   It provides a highly optimized, lightweight, centralized pub/sub store. 
+*   Leverages the built-in `persist` middleware to automatically synchronize the basket state with browser `localStorage` cleanly without complex boilerplate.
+
+### Styling System: Tailwind CSS v4
+*   Leverages Tailwind's advanced engine for hyper-fast utility styling.
+*   Maintains strict visual consistency across fluid responsive layouts using dynamic flexbox configurations and CSS Grid architectures.
+
+---
+
+## 📦 Directory Structure
+
+```text
+src/
+├── app/                  # App Router structural paths & viewports
+│   ├── cart/            # Shopping cart overview layout
+│   ├── product/         # Dynamic individual item view modules
+│   ├── layout.tsx       # Root document structure & wrapper setups
+│   └── page.tsx         # Primary catalog home view
+├── components/          # Sharable UI architectural units
+│   ├── Header.tsx       # Navigation layout with live badge indicators
+│   ├── Footer.tsx       # Responsive footer blocks with social nodes
+│   ├── ProductCard.tsx  # Dynamic grid listing item component
+│   ├── SidebarFilters.tsx # Multi-variable query filtering component
+│   └── SocialIcons.tsx  # Lightweight custom SVG asset components
+├── data/                # Data structures & mock product sets
+│   └── products.ts      # Core product listing data array
+└── store/               # Centralized state management nodes
+    └── useCartStore.ts  # Zustand cart interaction engine
