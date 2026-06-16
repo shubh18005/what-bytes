@@ -7,12 +7,6 @@ A high-performance, responsive e-commerce product catalog application built with
 ---
 
 
-# Responsive E-Commerce Catalog Workspace
-
-A high-performance, responsive e-commerce product catalog application built with **Next.js 16**, **Tailwind CSS v4**, and **TypeScript**. This project implements dynamic routing, robust product filtering architectures, and a centralized global shopping cart engine.
-
----
-
 ## 🚀 Key Features
 
 *   **Dynamic Product Catalog:** Fully responsive grid layout displaying product mock cards with smooth image transitions and detailed hover states.
